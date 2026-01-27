@@ -13,7 +13,7 @@ const Contact = () => {
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-primary to-primary-light rounded-full mx-auto mb-4"></div>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            I'm currently seeking graduate software engineering opportunities. Let's connect!
+            I&apos;m currently seeking graduate software engineering opportunities. Let&apos;s connect!
           </p>
         </div>
 
@@ -23,9 +23,9 @@ const Contact = () => {
             {/* Left Column - Contact Info */}
             <div className="space-y-6">
               <div className="bg-background-secondary border border-gray-800 rounded-2xl p-8">
-                <h3 className="text-2xl font-bold text-white mb-6">Let's Connect</h3>
+                <h3 className="text-2xl font-bold text-white mb-6">Let&apos;s Connect</h3>
                 <p className="text-gray-300 mb-8 leading-relaxed">
-                  I'm actively looking for graduate software engineering roles in cloud, full-stack, 
+                  I&apos;m actively looking for graduate software engineering roles in cloud, full-stack, 
                   or frontend-focused positions. Feel free to reach out!
                 </p>
 
@@ -87,7 +87,7 @@ const Contact = () => {
               </h3>
               <p className="text-gray-300 mb-8 leading-relaxed">
                 Looking for a passionate software engineer with industry experience? 
-                I'd love to hear from you!
+                I&apos;d love to hear from you!
               </p>
               <a
                 href="mailto:jack.tilford-carey@example.com"

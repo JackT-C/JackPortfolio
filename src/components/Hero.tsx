@@ -21,7 +21,7 @@ const Hero = () => {
 
           {/* Main Headline */}
           <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-slide-up">
-            Hi, I'm <span className="text-white whitespace-nowrap">Jack Tilford-Carey</span>
+            Hi, I&apos;m <span className="text-white whitespace-nowrap">Jack Tilford-Carey</span>
             <br />
             Software Engineer
           </h1>

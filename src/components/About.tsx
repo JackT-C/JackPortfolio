@@ -39,14 +39,14 @@ const About = () => {
           {/* Content */}
           <div className="space-y-6 text-lg text-gray-300 leading-relaxed">
             <p>
-              I'm a final-year <span className="text-white font-semibold">Computer Science student</span> at the 
+              I&apos;m a final-year <span className="text-white font-semibold">Computer Science student</span> at the 
               <span className="text-white font-semibold"> University of Reading</span>, passionate about building 
               scalable, cloud-ready applications that solve real-world problems.
             </p>
 
             <p>
               During my <span className="text-white font-semibold">year-long software developer internship at Eli Lilly</span>, 
-              I've had the opportunity to work as a developer on a <span className="text-white font-semibold">large-scale clinical trials project</span>, 
+              I&apos;ve had the opportunity to work as a developer on a <span className="text-white font-semibold">large-scale clinical trials project</span>, 
               continuing to develop my skills in React and Next.js within a large organization. Working in a 
               <span className="text-white font-semibold"> Scaled Agile Framework</span> environment through two-week sprints, 
               daily stand-ups, backlog refinement, and close collaboration has given me invaluable insight into how 
@@ -54,21 +54,21 @@ const About = () => {
             </p>
 
             <p>
-              Alongside this, I've also been involved in a student-led onboarding tool, which I co-founded alongside talented teammates, bringing innovation 
+              Alongside this, I&apos;ve also been involved in a student-led onboarding tool, which I co-founded alongside talented teammates, bringing innovation 
               to Lilly to help streamline and improve the onboarding experience.
             </p>
 
             <p>
               My interests span <span className="text-white font-semibold">scalable systems</span>, 
               <span className="text-white font-semibold"> cloud architecture</span>, and 
-              <span className="text-white font-semibold"> AI-assisted solutions</span>. I've built everything from 
+              <span className="text-white font-semibold"> AI-assisted solutions</span>. I&apos;ve built everything from 
               social media platforms with AI-powered moderation to restaurant management systems—taking full ownership 
               of projects from concept to deployment.
             </p>
 
             <p>
               I thrive on <span className="text-white font-semibold">problem-solving</span> and take pride in writing 
-              clean, maintainable code. I'm currently seeking graduate software engineering roles where I can continue 
+              clean, maintainable code. I&apos;m currently seeking graduate software engineering roles where I can continue 
               to grow as a developer while contributing to meaningful projects.
             </p>
 
