@@ -53,7 +53,7 @@ const Hero = () => {
           {/* Social Links */}
           <div className="flex items-center justify-center gap-6 animate-slide-up" style={{ animationDelay: '0.3s' }}>
             <a
-              href="https://github.com/jacktilfordcarey"
+              href="https://github.com/JackT-C"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-primary transition-colors duration-200 hover:scale-110 transform"
@@ -62,7 +62,7 @@ const Hero = () => {
               <FiGithub size={28} />
             </a>
             <a
-              href="https://linkedin.com/in/jacktilfordcarey"
+              href="https://www.linkedin.com/in/jack-tilford-carey-8a0940227/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-primary transition-colors duration-200 hover:scale-110 transform"

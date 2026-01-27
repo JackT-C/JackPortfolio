@@ -15,7 +15,7 @@ const Footer = () => {
           {/* Social Links */}
           <div className="flex items-center gap-6">
             <a
-              href="https://github.com/jacktilfordcarey"
+              href="https://github.com/JackT-C"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-primary transition-colors duration-200"
@@ -24,7 +24,7 @@ const Footer = () => {
               <FiGithub size={24} />
             </a>
             <a
-              href="https://linkedin.com/in/jacktilfordcarey"
+              href="https://www.linkedin.com/in/jack-tilford-carey-8a0940227/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-primary transition-colors duration-200"
@@ -33,7 +33,7 @@ const Footer = () => {
               <FiLinkedin size={24} />
             </a>
             <a
-              href="mailto:jack.tilford-carey@example.com"
+              href="mailto:jacktilfordcarey@gmail.com"
               className="text-gray-400 hover:text-primary transition-colors duration-200"
               aria-label="Email"
             >

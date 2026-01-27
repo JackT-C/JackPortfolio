@@ -1,8 +1,104 @@
-# Jack Tilford-Carey - CV
+# Jack Tilford-Carey
+**Software Developer | Computer Science Student**
 
-This is a placeholder for your CV. Replace this file with your actual CV PDF.
+📧 jacktilfordcarey@gmail.com | 📱 07544502497  
+💼 [LinkedIn](https://uk.linkedin.com/in/jack-tilford-carey-8a0940227) | 💻 [GitHub](https://github.com/JackT-C) | 🌐 [Portfolio](https://jacktilfordcarey.netlify.app/)
 
-To add your CV:
-1. Name your CV file: Jack_Tilford_Carey_CV.pdf
-2. Place it in the `public` folder
-3. It will be automatically available for download on the website
+---
+
+## Profile
+Third-year Computer Science student with demonstrated expertise in full-stack development and AI integration. Currently completing a year-long industry placement at Eli Lilly and Company. Proven track record of building production-ready applications with modern tech stacks including React, Node.js, and cloud deployment. Strong problem-solving abilities combined with excellent communication skills and a passion for creating innovative solutions. Seeking graduate opportunities in software engineering starting September 2026.
+
+---
+
+## Professional Experience
+
+**Software Engineering Placement Student** | Eli Lilly and Company | *July 2025 - July 2026*
+- Working as part of the software engineering team on enterprise-level pharmaceutical applications
+- Gaining hands-on experience with industry-standard development practices and methodologies
+- Contributing to full software development lifecycle from requirements gathering to deployment
+- Collaborating with cross-functional teams in an agile environment
+- Developing technical skills in enterprise software architecture and cloud technologies
+
+**Research Assistant** | University of Reading | *March 2024 - July 2024*
+- Researched and documented achievements of diverse mathematicians and computer scientists
+- Created engaging profiles published on university website reaching thousands of viewers
+- Contributed to diversity and inclusion initiatives in STEM education
+
+**Frontend Software Developer** | Skyscanner (Remote) | *May 2024*
+- Developed webpage components using JavaScript, HTML, and React API
+- Self-taught modern frontend development tools including npm and Node.js
+- Gained experience with industry-standard development workflows
+
+**Lifeguard** | GLL/Better Leisure | *August 2022 - Present*
+- Supervised leisure pools ensuring safety of patrons
+- Developed strong teamwork and communication skills, especially in emergency situations
+- Maintained NPLQ qualification with regular training updates
+
+---
+
+## Technical Projects
+
+### MyPace - AI-Powered Voice-Interactive Running Coach
+**Node.js | Express | React | PostgreSQL | Groq AI | Strava API | Heroku**  
+*September 2024 - Present*
+- Developed full-stack running analytics platform with hands-free voice interaction using Groq's LLaMA models
+- Implemented Strava OAuth 2.0 and webhook APIs for real-time activity syncing
+- Built voice recognition/synthesis system using Web Speech API for natural conversation with AI coach
+- Deployed with PostgreSQL database (Sequelize ORM) and continuous deployment pipeline on Heroku
+- **Live Demo**: [mypace-6d33e7a27078.herokuapp.com](https://mypace-6d33e7a27078.herokuapp.com/)
+
+### Yappo - Social Media Platform
+**React | Node.js | Express | MongoDB | Socket.io | Cloudinary**  
+*June 2024 - August 2024*
+- Built full-stack social media application with real-time messaging using Socket.io
+- Implemented secure JWT authentication and media upload system with Cloudinary integration
+- Developed responsive UI with user profiles, posts, comments, and live notifications
+- Designed RESTful API architecture with MongoDB for scalable data management
+
+### Bilingual Restaurant POS System
+**React | TypeScript | Tailwind CSS | i18next | Framer Motion**  
+*April 2024 - June 2024*
+- Created multilingual point-of-sale system supporting English and Mandarin Chinese
+- Implemented real-time order management with dynamic menu categorization and search
+- Built responsive design with smooth animations and intuitive staff interface
+- Developed order tracking system with status updates and receipt generation
+
+---
+
+## Education
+
+**University of Reading** | *September 2023 - June 2026*  
+**BSc Computer Science** - Predicted First Class Honours  
+*Currently on Year in Industry placement (2024-2025)*
+
+**Relevant Coursework & Achievements:**
+- C++ Text-Based Adventure Game (83%)
+- MATLAB Matrices/Integration (100%)
+- C++ Matrices Calculator (73%)
+- Software Engineering Group Project (71.9%)
+
+**Reigate College** | *September 2021 - June 2023*  
+A-Levels: Computer Science, Economics, Business (BCC)
+- Developed Java fitness app with MySQL database integration
+- Active member: Aspire Society, Robotics Society, Athletics
+
+**Oakwood School** | *September 2016 - July 2021*  
+GCSEs: 9/10 grades 7-9 (A-A*) including English, Maths, and Sciences
+- STEM Society, School Council, Athletics, Prefect
+
+---
+
+## Technical Skills
+
+**Languages:** JavaScript, TypeScript, Python, C++, C, Java, HTML, CSS, PHP, SQL  
+**Frontend:** React, Vite, Tailwind CSS, Framer Motion, Web Speech API, i18next  
+**Backend:** Node.js, Express, RESTful APIs, PostgreSQL, MongoDB, Sequelize ORM, Socket.io  
+**Tools & Platforms:** Git, GitHub, npm, Heroku, Render, MongoDB Atlas, Cloudinary, OAuth 2.0  
+**AI/ML:** Groq AI, LLaMA models, AI algorithm implementation
+
+---
+
+## Interests & Activities
+
+🏃 Competitive 800m athlete | 🏊 Swimming | 🏋️ Weightlifting | 🧗 Hiking & Climbing 

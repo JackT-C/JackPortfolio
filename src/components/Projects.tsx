@@ -1,12 +1,78 @@
 'use client';
 
 import { useState } from 'react';
-import { FiExternalLink, FiGithub, FiCalendar, FiUsers, FiCpu, FiShoppingCart, FiChevronDown, FiChevronUp } from 'react-icons/fi';
+import { FiExternalLink, FiGithub, FiCalendar, FiUsers, FiCpu, FiShoppingCart, FiChevronDown, FiChevronUp, FiMic } from 'react-icons/fi';
 
 const Projects = () => {
   const [expandedProject, setExpandedProject] = useState<number | null>(null);
 
   const projects = [
+    {
+      title: 'MyPace',
+      subtitle: 'AI-Powered Voice-Interactive Running Coach',
+      period: 'Dec 2025 – Feb 2026',
+      description:
+        'A full-stack running analytics platform featuring hands-free voice interaction with an AI coach powered by Groq\'s LLaMA models. Athletes can have natural voice conversations about their training, ask questions, get form feedback, and receive personalized coaching recommendations while reviewing their Strava activities.',
+      highlights: [
+        'Built voice-first AI coaching interface using Web Speech API for natural conversations during post-run debriefs',
+        'Integrated Groq\'s LLaMA models to provide personalized coaching recommendations based on running data',
+        'Implemented real-time activity syncing with Strava OAuth 2.0 and webhook APIs',
+        'Deployed scalable full-stack solution on Heroku with continuous deployment pipeline',
+        'Designed PostgreSQL database schema with Sequelize ORM for efficient activity data management',
+      ],
+      technologies: [
+        'Node.js',
+        'Express',
+        'React',
+        'Vite',
+        'PostgreSQL',
+        'Sequelize',
+        'Groq AI',
+        'LLaMA',
+        'Web Speech API',
+        'Strava API',
+        'OAuth 2.0',
+        'Heroku',
+      ],
+      liveLink: 'https://mypace-6d33e7a27078.herokuapp.com/',
+      icon: FiMic,
+      gradient: 'from-orange-500 to-red-600',
+      deepDive: {
+        architecture: {
+          description: 'Voice-first full-stack application with AI coaching integration, real-time Strava sync, and hands-free interaction',
+          components: [
+            'Frontend: React + Vite with Web Speech API for voice recognition and synthesis',
+            'Backend: Node.js/Express REST API with webhook handling',
+            'Database: PostgreSQL with Sequelize ORM for activity data and user profiles',
+            'AI: Groq\'s LLaMA models for conversational coaching recommendations',
+            'Integration: Strava OAuth 2.0 and webhooks for real-time activity syncing',
+            'Deployment: Heroku with continuous deployment pipeline',
+          ],
+        },
+        decisions: [
+          'Used Web Speech API for browser-native voice recognition instead of cloud services for lower latency',
+          'Chose Groq\'s LLaMA for AI coaching due to fast inference speeds crucial for conversational UX',
+          'Implemented Strava webhooks for real-time activity updates instead of polling',
+          'Selected PostgreSQL for relational activity data with strong ACID guarantees',
+          'Built with Vite for faster development and optimized production builds',
+        ],
+        tradeoffs: [
+          'Web Speech API vs cloud speech services: Browser-native but limited browser support',
+          'Groq vs OpenAI: Faster inference but less model variety and customization',
+          'Webhooks vs polling: Real-time updates but requires public endpoint management',
+          'PostgreSQL vs NoSQL: Better for relational activity data but less flexible schema',
+          'Heroku vs AWS: Easier deployment but higher cost and potential cold starts',
+        ],
+        improvements: [
+          'Add mobile app with native speech recognition for better performance',
+          'Implement workout plan generation with calendar integration',
+          'Add training load analysis and injury risk prediction',
+          'Integrate with additional platforms (Garmin, Apple Health, Google Fit)',
+          'Enhance AI with fine-tuned model on running coaching data',
+          'Add social features for coach-athlete or team interactions',
+        ],
+      },
+    },
     {
       title: 'Yappo',
       subtitle: 'AI-Powered Social Media Platform',

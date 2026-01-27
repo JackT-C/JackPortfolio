@@ -32,7 +32,7 @@ const Contact = () => {
                 {/* Contact Methods */}
                 <div className="space-y-4">
                   <a
-                    href="mailto:jack.tilford-carey@example.com"
+                    href="mailto:jacktilfordcarey@gmail.com"
                     className="flex items-center gap-4 p-4 bg-background-tertiary hover:bg-background rounded-lg transition-colors duration-200 group"
                   >
                     <div className="p-3 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors">
@@ -40,12 +40,12 @@ const Contact = () => {
                     </div>
                     <div>
                       <p className="text-sm text-gray-400">Email</p>
-                      <p className="text-white font-medium">jack.tilford-carey@example.com</p>
+                      <p className="text-white font-medium">jacktilfordcarey@gmail.com</p>
                     </div>
                   </a>
 
                   <a
-                    href="https://github.com/jacktilfordcarey"
+                    href="https://github.com/JackT-C"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-4 p-4 bg-background-tertiary hover:bg-background rounded-lg transition-colors duration-200 group"
@@ -55,12 +55,12 @@ const Contact = () => {
                     </div>
                     <div>
                       <p className="text-sm text-gray-400">GitHub</p>
-                      <p className="text-white font-medium">@jacktilfordcarey</p>
+                      <p className="text-white font-medium">@JackT-C</p>
                     </div>
                   </a>
 
                   <a
-                    href="https://linkedin.com/in/jacktilfordcarey"
+                    href="https://www.linkedin.com/in/jack-tilford-carey-8a0940227/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-4 p-4 bg-background-tertiary hover:bg-background rounded-lg transition-colors duration-200 group"
