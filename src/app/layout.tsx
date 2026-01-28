@@ -9,6 +9,11 @@ export const metadata: Metadata = {
   description: "Final-year Computer Science student and Software Engineer with industry experience at Eli Lilly. Specializing in React, Next.js, and AWS cloud solutions.",
   keywords: ["Software Engineer", "Computer Science", "React", "Next.js", "AWS", "Full Stack Developer", "Cloud Computing"],
   authors: [{ name: "Jack Tilford-Carey" }],
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 5,
+  },
   openGraph: {
     title: "Jack Tilford-Carey | Software Engineer",
     description: "Software Engineer building scalable, cloud-ready applications",
