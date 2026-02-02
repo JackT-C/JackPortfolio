@@ -20,16 +20,16 @@ const Hero = () => {
           </div>
 
           {/* Main Headline */}
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-slide-up">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 animate-slide-up leading-tight">
             Hi, I&apos;m <span className="text-white whitespace-nowrap">Jack Tilford-Carey</span>
             <br />
             Software Engineer
           </h1>
 
           {/* Description */}
-          <p className="text-xl md:text-2xl text-gray-400 mb-8 leading-relaxed animate-slide-up" style={{ animationDelay: '0.1s' }}>
+          <p className="text-lg sm:text-xl md:text-2xl text-gray-400 mb-8 leading-relaxed animate-slide-up px-4 sm:px-0" style={{ animationDelay: '0.1s' }}>
             Final-year Computer Science student at the University of Reading with 
-            a year-long internship at Eli Lilly. Specializing in React, Next.js, 
+            a year-long internship at Eli Lilly. Specialising in React, Next.js, 
             and AWS to build production-grade, scalable applications.
           </p>
 

@@ -47,7 +47,7 @@ const About = () => {
             <p>
               During my <span className="text-white font-semibold">year-long software developer internship at Eli Lilly</span>, 
               I&apos;ve had the opportunity to work as a developer on a <span className="text-white font-semibold">large-scale clinical trials project</span>, 
-              continuing to develop my skills in React and Next.js within a large organization. Working in a 
+              continuing to develop my skills in React and Next.js within a large organisation. Working in a 
               <span className="text-white font-semibold"> Scaled Agile Framework</span> environment through two-week sprints, 
               daily stand-ups, backlog refinement, and close collaboration has given me invaluable insight into how 
               impactful software is built at scale.
@@ -73,22 +73,22 @@ const About = () => {
             </p>
 
             {/* Highlight Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12 pt-8 border-t border-gray-700">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-gradient mb-2">12+</div>
-                <div className="text-sm text-gray-400">Months Industry Experience</div>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 mt-12 pt-8 border-t border-gray-700">
+              <div className="text-center p-3">
+                <div className="text-2xl sm:text-3xl font-bold text-gradient mb-2">12+</div>
+                <div className="text-xs sm:text-sm text-gray-400">Months Industry Experience</div>
               </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-gradient mb-2">2</div>
-                <div className="text-sm text-gray-400">AWS Certifications</div>
+              <div className="text-center p-3">
+                <div className="text-2xl sm:text-3xl font-bold text-gradient mb-2">2</div>
+                <div className="text-xs sm:text-sm text-gray-400">AWS Certifications</div>
               </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-gradient mb-2">10+</div>
-                <div className="text-sm text-gray-400">Major Projects</div>
+              <div className="text-center p-3">
+                <div className="text-2xl sm:text-3xl font-bold text-gradient mb-2">10+</div>
+                <div className="text-xs sm:text-sm text-gray-400">Major Projects</div>
               </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-gradient mb-2">100%</div>
-                <div className="text-sm text-gray-400">Commitment</div>
+              <div className="text-center p-3">
+                <div className="text-2xl sm:text-3xl font-bold text-gradient mb-2">100%</div>
+                <div className="text-xs sm:text-sm text-gray-400">Commitment</div>
               </div>
             </div>
           </div>

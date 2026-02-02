@@ -54,7 +54,7 @@ const Projects = () => {
           'Chose Groq\'s LLaMA for AI coaching due to fast inference speeds crucial for conversational UX',
           'Implemented Strava webhooks for real-time activity updates instead of polling',
           'Selected PostgreSQL for relational activity data with strong ACID guarantees',
-          'Built with Vite for faster development and optimized production builds',
+          'Built with Vite for faster development and optimised production builds',
         ],
         tradeoffs: [
           'Web Speech API vs cloud speech services: Browser-native but limited browser support',
@@ -142,7 +142,7 @@ const Projects = () => {
         'Designed interactive table management UI for efficient service coordination',
         'Implemented multi-language support (English & Chinese) for diverse user base',
         'Created role-based access control for Admin, Manager, Waiter, and Cashier roles',
-        'Developed analytics dashboard for revenue tracking and menu optimization',
+            'Developed analytics dashboard for revenue tracking and menu optimisation',
       ],
       technologies: [
         'React',
@@ -208,34 +208,34 @@ const Projects = () => {
         </div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
           {projects.map((project, index) => (
             <div
               key={index}
               className="bg-background border border-gray-800 rounded-2xl overflow-hidden hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:shadow-primary/10 group"
             >
-              <div className="p-8 md:p-10">
+              <div className="p-6 sm:p-8 md:p-10">
                 {/* Project Header */}
-                <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-6">
-                  <div className="flex items-start gap-4 mb-4 md:mb-0">
-                    <div className={`p-3 bg-gradient-to-br ${project.gradient} rounded-xl`}>
-                      <project.icon size={28} className="text-white" />
+                <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-6 gap-4">
+                  <div className="flex items-start gap-3 sm:gap-4">
+                    <div className={`p-2 sm:p-3 bg-gradient-to-br ${project.gradient} rounded-xl flex-shrink-0`}>
+                      <project.icon size={24} className="text-white sm:w-7 sm:h-7" />
                     </div>
                     <div>
-                      <h3 className="text-2xl md:text-3xl font-bold text-white mb-1 group-hover:text-gradient transition-colors">
+                      <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-1 group-hover:text-gradient transition-colors break-words">
                         {project.title}
                       </h3>
-                      <p className="text-gray-400 font-medium">{project.subtitle}</p>
+                      <p className="text-gray-400 font-medium text-sm sm:text-base">{project.subtitle}</p>
                     </div>
                   </div>
-                  <div className="flex items-center gap-2 text-gray-400 text-sm">
+                  <div className="flex items-center gap-2 text-gray-400 text-xs sm:text-sm flex-shrink-0">
                     <FiCalendar size={16} />
                     <span>{project.period}</span>
                   </div>
                 </div>
 
                 {/* Description */}
-                <p className="text-gray-300 text-lg mb-6 leading-relaxed">
+                <p className="text-gray-300 text-base sm:text-lg mb-6 leading-relaxed">
                   {project.description}
                 </p>
 
@@ -268,19 +268,19 @@ const Projects = () => {
                 </div>
 
                 {/* Links */}
-                <div className="flex flex-wrap gap-4 pt-6 border-t border-gray-800">
+                <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 pt-6 border-t border-gray-800">
                   <a
                     href={project.liveLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 px-6 py-3 bg-primary hover:bg-primary-dark text-white rounded-lg transition-all duration-200 font-semibold hover:glow-effect"
+                    className="flex items-center justify-center gap-2 px-6 py-3 bg-primary hover:bg-primary-dark text-white rounded-lg transition-all duration-200 font-semibold hover:glow-effect touch-target"
                   >
                     <FiExternalLink size={18} />
                     View Live Demo
                   </a>
                   <button
                     onClick={() => setExpandedProject(expandedProject === index ? null : index)}
-                    className="flex items-center gap-2 px-6 py-3 bg-background-tertiary hover:bg-background border border-gray-700 hover:border-primary/50 text-white rounded-lg transition-all duration-200 font-semibold"
+                    className="flex items-center justify-center gap-2 px-6 py-3 bg-background-tertiary hover:bg-background border border-gray-700 hover:border-primary/50 text-white rounded-lg transition-all duration-200 font-semibold touch-target"
                   >
                     {expandedProject === index ? <FiChevronUp size={18} /> : <FiChevronDown size={18} />}
                     {expandedProject === index ? 'Hide' : 'View'} Deep Dive

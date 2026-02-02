@@ -90,11 +90,11 @@ const Skills = () => {
         </div>
 
         {/* Skills Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {skillCategories.map((category, index) => (
             <div
               key={index}
-              className="bg-background-secondary border border-gray-800 rounded-2xl p-6 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 group"
+              className="bg-background-secondary border border-gray-800 rounded-2xl p-5 sm:p-6 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 group"
             >
               {/* Category Header */}
               <div className="flex items-center gap-3 mb-6">

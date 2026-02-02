@@ -60,9 +60,10 @@ const Navbar = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-white text-2xl"
+            className="md:hidden text-white text-2xl p-2 touch-target"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
+            aria-expanded={isOpen}
           >
             {isOpen ? <FiX /> : <FiMenu />}
           </button>
@@ -71,13 +72,13 @@ const Navbar = () => {
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden pb-6 animate-fade-in">
-            <div className="flex flex-col space-y-4">
+            <div className="flex flex-col space-y-4 pt-4">
               {navLinks.map((link) => (
                 <a
                   key={link.href}
                   href={link.href}
                   onClick={() => setIsOpen(false)}
-                  className="text-gray-300 hover:text-primary transition-colors duration-200 font-medium text-lg"
+                  className="text-gray-300 hover:text-primary transition-colors duration-200 font-medium text-lg py-2 touch-target"
                 >
                   {link.label}
                 </a>
@@ -85,7 +86,7 @@ const Navbar = () => {
               <a
                 href="/Jack_Tilford_Carey_CV.pdf"
                 download
-                className="px-6 py-3 bg-primary hover:bg-primary-dark text-white rounded-lg transition-all duration-200 font-medium text-center"
+                className="px-6 py-3 bg-primary hover:bg-primary-dark text-white rounded-lg transition-all duration-200 font-medium text-center touch-target mt-2"
               >
                 Download CV
               </a>

@@ -15,28 +15,28 @@ const Experience = () => {
         </div>
 
         {/* Experience Cards */}
-        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
           {/* Eli Lilly Experience */}
-          <div className="bg-background-secondary border border-gray-800 rounded-2xl p-8 md:p-10 hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:shadow-primary/10">
+          <div className="bg-background-secondary border border-gray-800 rounded-2xl p-6 sm:p-8 md:p-10 hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:shadow-primary/10">
             {/* Header */}
-            <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
+            <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6 gap-4">
               <div>
-                <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">
+                <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-2">
                   Software Developer Intern
                 </h3>
-                <div className="flex items-center gap-2 text-primary text-lg font-semibold">
-                  <FiBriefcase size={20} />
+                <div className="flex items-center gap-2 text-primary text-base sm:text-lg font-semibold">
+                  <FiBriefcase size={18} className="sm:w-5 sm:h-5" />
                   <span>Eli Lilly and Company</span>
                 </div>
               </div>
-              <div className="flex items-center gap-2 text-gray-400 mt-4 md:mt-0">
-                <FiCalendar size={18} />
+              <div className="flex items-center gap-2 text-gray-400">
+                <FiCalendar size={16} className="sm:w-[18px] sm:h-[18px]" />
                 <span className="text-sm md:text-base">12 Months</span>
               </div>
             </div>
 
             {/* Description */}
-            <p className="text-gray-300 text-lg mb-6 leading-relaxed">
+            <p className="text-gray-300 text-base sm:text-lg mb-6 leading-relaxed">
               Worked as a developer on a large-scale clinical trials project, gaining invaluable experience building 
               impactful software within a Scaled Agile Framework environment at a Fortune 500 pharmaceutical company.
             </p>
@@ -51,10 +51,10 @@ const Experience = () => {
                   'Worked in a Scaled Agile Framework with two-week sprints, daily stand-ups, and backlog refinement',
                   'Earned AWS Certified Cloud Practitioner and AWS Certified AI Practitioner certifications',
                   'Co-founded a student-led onboarding tool to bring innovation and improve onboarding experience',
-                  'Served as Mental Health Ambassador, completing MHFA England training and organizing wellness initiatives',
+                  'Served as Mental Health Ambassador, completing MHFA England training and organising wellness initiatives',
                   'Coordinated the Code for All Hackathon, with supervised team achieving first place',
                   'Attended data conference in London, gaining insights into big data and AI industry trends',
-                  'Delivered lunch-and-learn sessions and organized mental health initiatives (gratitude wall, Movember events)',
+                  'Delivered lunch-and-learn sessions and organised mental health initiatives (gratitude wall, Movember events)',
                 ].map((item, index) => (
                   <div key={index} className="flex items-start gap-3 text-gray-300">
                     <FiCheckCircle className="text-primary mt-1 flex-shrink-0" size={20} />

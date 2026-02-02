@@ -19,12 +19,12 @@ const Contact = () => {
 
         {/* Contact Content */}
         <div className="max-w-4xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
             {/* Left Column - Contact Info */}
             <div className="space-y-6">
-              <div className="bg-background-secondary border border-gray-800 rounded-2xl p-8">
-                <h3 className="text-2xl font-bold text-white mb-6">Let&apos;s Connect</h3>
-                <p className="text-gray-300 mb-8 leading-relaxed">
+              <div className="bg-background-secondary border border-gray-800 rounded-2xl p-6 sm:p-8">
+                <h3 className="text-xl sm:text-2xl font-bold text-white mb-6">Let&apos;s Connect</h3>
+                <p className="text-gray-300 mb-8 leading-relaxed text-sm sm:text-base">
                   I&apos;m actively looking for graduate software engineering roles in cloud, full-stack, 
                   or frontend-focused positions. Feel free to reach out!
                 </p>
@@ -78,20 +78,20 @@ const Contact = () => {
             </div>
 
             {/* Right Column - CTA */}
-            <div className="bg-gradient-to-br from-primary/10 to-purple-600/10 border border-primary/30 rounded-2xl p-8 flex flex-col justify-center items-center text-center">
-              <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mb-6">
-                <FiSend size={32} className="text-primary" />
+            <div className="bg-gradient-to-br from-primary/10 to-purple-600/10 border border-primary/30 rounded-2xl p-6 sm:p-8 flex flex-col justify-center items-center text-center">
+              <div className="w-14 h-14 sm:w-16 sm:h-16 bg-primary/20 rounded-full flex items-center justify-center mb-6">
+                <FiSend size={28} className="text-primary sm:w-8 sm:h-8" />
               </div>
-              <h3 className="text-2xl font-bold text-white mb-4">
+              <h3 className="text-xl sm:text-2xl font-bold text-white mb-4">
                 Open to Opportunities
               </h3>
-              <p className="text-gray-300 mb-8 leading-relaxed">
+              <p className="text-gray-300 mb-8 leading-relaxed text-sm sm:text-base">
                 Looking for a passionate software engineer with industry experience? 
                 I&apos;d love to hear from you!
               </p>
               <a
                 href="mailto:jack.tilford-carey@example.com"
-                className="px-8 py-4 bg-primary hover:bg-primary-dark text-white rounded-lg transition-all duration-200 font-semibold text-lg hover:glow-effect hover:scale-105 w-full sm:w-auto"
+                className="px-8 py-4 bg-primary hover:bg-primary-dark text-white rounded-lg transition-all duration-200 font-semibold text-lg hover:glow-effect hover:scale-105 w-full sm:w-auto touch-target"
               >
                 Send Message
               </a>
