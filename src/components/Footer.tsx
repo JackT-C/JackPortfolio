@@ -17,7 +17,13 @@ const Footer = () => {
           </a>
         </div>
 
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+        {/* Logo & Tagline */}
+        <div className="text-center mb-8">
+          <span className="text-2xl font-bold text-gradient">JTC</span>
+          <p className="text-gray-500 text-sm mt-2">Building scalable, cloud-ready applications</p>
+        </div>
+
+        <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Copyright */}
           <p className="text-gray-400 text-sm">
             © {currentYear} Jack Tilford-Carey. All rights reserved.

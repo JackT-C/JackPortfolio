@@ -230,7 +230,7 @@ const Projects = () => {
             <motion.div
               key={index}
               variants={fadeUp}
-              className="bg-background border border-gray-800 rounded-2xl overflow-hidden hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:shadow-primary/10 group"
+              className={`bg-background border border-gray-800 rounded-2xl overflow-hidden hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:shadow-primary/10 group ${index === 0 ? 'lg:col-span-2' : ''}`}
             >
               <div className="p-6 sm:p-8 md:p-10">
                 {/* Project Header */}

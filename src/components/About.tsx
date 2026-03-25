@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
+import Image from 'next/image';
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -52,7 +53,7 @@ const About = () => {
         whileInView="visible"
         viewport={{ once: true, margin: '-50px' }}
       >
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           {/* Section Header */}
           <motion.div variants={fadeUp} className="mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
@@ -60,6 +61,24 @@ const About = () => {
             </h2>
             <div className="w-20 h-1 bg-gradient-to-r from-primary to-primary-light rounded-full"></div>
           </motion.div>
+
+          <div className="flex flex-col lg:flex-row gap-10 lg:gap-14 items-start">
+            {/* Profile Photo */}
+            <motion.div variants={fadeUp} className="flex-shrink-0 mx-auto lg:mx-0">
+              <div className="relative">
+                <div className="w-48 h-48 sm:w-56 sm:h-56 rounded-2xl overflow-hidden border-2 border-primary/30 shadow-xl shadow-primary/10">
+                  <Image
+                    src="/profile_photo.png"
+                    alt="Jack Tilford-Carey"
+                    width={224}
+                    height={224}
+                    className="object-cover w-full h-full"
+                    priority
+                  />
+                </div>
+                <div className="absolute -bottom-2 -right-2 w-6 h-6 bg-primary rounded-full border-4 border-background-secondary"></div>
+              </div>
+            </motion.div>
 
           {/* Content */}
           <div className="space-y-6 text-lg text-gray-300 leading-relaxed">
@@ -121,6 +140,7 @@ const About = () => {
                 <div className="text-xs sm:text-sm text-gray-400">Commitment</div>
               </div>
             </motion.div>
+          </div>
           </div>
         </div>
       </motion.div>

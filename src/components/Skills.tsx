@@ -6,17 +6,20 @@ import {
   SiJavascript,
   SiTypescript,
   SiHtml5,
-  SiCss3,
   SiNodedotjs,
   SiPhp,
   SiMongodb,
   SiAmazon,
   SiHeroku,
-  SiKotlin,
   SiPython,
   SiGit,
+  SiPostgresql,
+  SiExpress,
+  SiTailwindcss,
+  SiVite,
+  SiSocketdotio,
 } from 'react-icons/si';
-import { FiCode, FiServer, FiCloud, FiSmartphone, FiCpu, FiTool } from 'react-icons/fi';
+import { FiCode, FiServer, FiCloud, FiCpu, FiDatabase } from 'react-icons/fi';
 import { motion } from 'framer-motion';
 
 const fadeUp = {
@@ -38,50 +41,51 @@ const Skills = () => {
       skills: [
         { name: 'React', icon: SiReact },
         { name: 'Next.js', icon: SiNextdotjs },
-        { name: 'JavaScript', icon: SiJavascript },
         { name: 'TypeScript', icon: SiTypescript },
-        { name: 'HTML', icon: SiHtml5 },
-        { name: 'CSS', icon: SiCss3 },
+        { name: 'JavaScript', icon: SiJavascript },
+        { name: 'Tailwind CSS', icon: SiTailwindcss },
+        { name: 'HTML / CSS', icon: SiHtml5 },
       ],
     },
     {
       title: 'Backend',
       icon: FiServer,
-      color: 'from-green-500 to-emerald-500',
+      color: 'from-blue-500 to-cyan-500',
       skills: [
         { name: 'Node.js', icon: SiNodedotjs },
+        { name: 'Express', icon: SiExpress },
         { name: 'PHP', icon: SiPhp },
+        { name: 'REST APIs', icon: FiServer },
+        { name: 'Socket.io', icon: SiSocketdotio },
+        { name: 'Vite', icon: SiVite },
+      ],
+    },
+    {
+      title: 'Databases',
+      icon: FiDatabase,
+      color: 'from-orange-500 to-amber-500',
+      skills: [
+        { name: 'PostgreSQL', icon: SiPostgresql },
         { name: 'MongoDB', icon: SiMongodb },
       ],
     },
     {
       title: 'Cloud & DevOps',
       icon: FiCloud,
-      color: 'from-orange-500 to-amber-500',
+      color: 'from-purple-500 to-pink-500',
       skills: [
         { name: 'AWS', icon: SiAmazon },
         { name: 'Heroku', icon: SiHeroku },
+        { name: 'Git', icon: SiGit },
       ],
-    },
-    {
-      title: 'Mobile',
-      icon: FiSmartphone,
-      color: 'from-purple-500 to-pink-500',
-      skills: [{ name: 'Kotlin (Android)', icon: SiKotlin }],
     },
     {
       title: 'AI / ML',
       icon: FiCpu,
       color: 'from-red-500 to-rose-500',
-      skills: [{ name: 'Python', icon: SiPython }],
-    },
-    {
-      title: 'Tools',
-      icon: FiTool,
-      color: 'from-teal-500 to-cyan-500',
       skills: [
-        { name: 'Git', icon: SiGit },
-        { name: 'REST APIs', icon: FiServer },
+        { name: 'Python', icon: SiPython },
+        { name: 'Groq AI / LLaMA', icon: FiCpu },
       ],
     },
   ];

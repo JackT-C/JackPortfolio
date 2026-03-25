@@ -19,6 +19,7 @@ const Hero = () => {
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute inset-0 grid-pattern" />
         <div className="absolute w-96 h-96 bg-primary/10 rounded-full blur-3xl -top-48 -left-48 animate-float"></div>
         <div className="absolute w-96 h-96 bg-primary/10 rounded-full blur-3xl -bottom-48 -right-48 animate-float" style={{ animationDelay: '1s' }}></div>
       </div>
