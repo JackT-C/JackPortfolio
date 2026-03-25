@@ -2,6 +2,17 @@
 
 import { SiAmazon } from 'react-icons/si';
 import { FiAward, FiCheckCircle } from 'react-icons/fi';
+import { motion } from 'framer-motion';
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.25, 0.1, 0.25, 1] as const } },
+};
+
+const staggerContainer = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.15 } },
+};
 
 const Certifications = () => {
   const certifications = [
@@ -27,9 +38,15 @@ const Certifications = () => {
 
   return (
     <section id="certifications" className="section-padding bg-background-secondary">
-      <div className="container-custom">
+      <motion.div
+        className="container-custom"
+        variants={staggerContainer}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: '-50px' }}
+      >
         {/* Section Header */}
-        <div className="mb-16 text-center">
+        <motion.div variants={fadeUp} className="mb-16 text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             <span className="text-gradient">Certifications</span>
           </h2>
@@ -37,13 +54,14 @@ const Certifications = () => {
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
             Validated expertise in cloud computing and AI technologies
           </p>
-        </div>
+        </motion.div>
 
         {/* Certifications Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {certifications.map((cert, index) => (
-            <div
+            <motion.div
               key={index}
+              variants={fadeUp}
               className="bg-background border border-gray-800 rounded-2xl p-8 hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:shadow-primary/10 group"
             >
               {/* Badge Icon */}
@@ -75,7 +93,7 @@ const Certifications = () => {
                   {cert.skills.map((skill, idx) => (
                     <span
                       key={idx}
-                      className="px-3 py-1.5 bg-background-tertiary border border-gray-700 rounded-lg text-sm text-gray-300 hover:border-primary/50 transition-colors"
+                      className="px-3 py-1.5 bg-background-tertiary border border-gray-700 rounded-lg text-sm text-gray-300 hover:border-primary/50 hover:scale-105 hover:bg-primary/10 transition-all duration-200"
                     >
                       {skill}
                     </span>
@@ -90,10 +108,10 @@ const Certifications = () => {
                   <span className="text-sm font-semibold">Verified Certification</span>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };

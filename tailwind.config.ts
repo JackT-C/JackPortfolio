@@ -10,9 +10,9 @@ const config: Config = {
     extend: {
       colors: {
         primary: {
-          DEFAULT: '#3b82f6', // Electric blue
-          dark: '#2563eb',
-          light: '#60a5fa',
+          DEFAULT: '#22c55e',
+          dark: '#16a34a',
+          light: '#4ade80',
         },
         background: {
           DEFAULT: '#0a0a0a',
@@ -21,7 +21,7 @@ const config: Config = {
         },
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
+        sans: ['Datatype', 'system-ui', 'sans-serif'],
       },
       animation: {
         'fade-in': 'fadeIn 0.6s ease-out',

@@ -1,23 +1,40 @@
 'use client';
 
 import { FiBriefcase, FiCalendar, FiCheckCircle } from 'react-icons/fi';
+import { motion } from 'framer-motion';
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.25, 0.1, 0.25, 1] as const } },
+};
+
+const staggerContainer = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.15 } },
+};
 
 const Experience = () => {
   return (
     <section id="experience" className="section-padding bg-background">
-      <div className="container-custom">
+      <motion.div
+        className="container-custom"
+        variants={staggerContainer}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: '-50px' }}
+      >
         {/* Section Header */}
-        <div className="mb-16 text-center">
+        <motion.div variants={fadeUp} className="mb-16 text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             Professional <span className="text-gradient">Experience</span>
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-primary to-primary-light rounded-full mx-auto"></div>
-        </div>
+        </motion.div>
 
         {/* Experience Cards */}
         <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
           {/* Eli Lilly Experience */}
-          <div className="bg-background-secondary border border-gray-800 rounded-2xl p-6 sm:p-8 md:p-10 hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:shadow-primary/10">
+          <motion.div variants={fadeUp} className="bg-background-secondary border border-gray-800 rounded-2xl p-6 sm:p-8 md:p-10 hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:shadow-primary/10">
             {/* Header */}
             <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6 gap-4">
               <div>
@@ -71,19 +88,19 @@ const Experience = () => {
                 {['React', 'Next.js', 'TypeScript', 'JavaScript', 'AWS', 'Node.js', 'Git', 'Agile'].map((tech) => (
                   <span
                     key={tech}
-                    className="px-4 py-2 bg-background-tertiary border border-gray-700 rounded-lg text-sm text-gray-300 hover:border-primary/50 transition-colors"
+                    className="px-4 py-2 bg-background-tertiary border border-gray-700 rounded-lg text-sm text-gray-300 hover:border-primary/50 hover:scale-105 hover:bg-primary/10 transition-all duration-200"
                   >
                     {tech}
                   </span>
                 ))}
               </div>
             </div>
-          </div>
+          </motion.div>
 
           {/* University of Reading Research Assistant */}
-          <div className="bg-background-secondary border border-gray-800 rounded-2xl p-8 md:p-10 hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:shadow-primary/10">
+          <motion.div variants={fadeUp} className="bg-background-secondary border border-gray-800 rounded-2xl p-6 sm:p-8 md:p-10 hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:shadow-primary/10">
             {/* Header */}
-            <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
+            <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6 gap-4">
               <div>
                 <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">
                   Research Assistant
@@ -131,16 +148,16 @@ const Experience = () => {
                 {['Research', 'Technical Writing', 'Cross-departmental Collaboration', 'Content Creation'].map((tech) => (
                   <span
                     key={tech}
-                    className="px-4 py-2 bg-background-tertiary border border-gray-700 rounded-lg text-sm text-gray-300 hover:border-primary/50 transition-colors"
+                    className="px-4 py-2 bg-background-tertiary border border-gray-700 rounded-lg text-sm text-gray-300 hover:border-primary/50 hover:scale-105 hover:bg-primary/10 transition-all duration-200"
                   >
                     {tech}
                   </span>
                 ))}
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };

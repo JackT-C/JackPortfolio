@@ -17,13 +17,24 @@ import {
   SiGit,
 } from 'react-icons/si';
 import { FiCode, FiServer, FiCloud, FiSmartphone, FiCpu, FiTool } from 'react-icons/fi';
+import { motion } from 'framer-motion';
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.25, 0.1, 0.25, 1] as const } },
+};
+
+const staggerContainer = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.1 } },
+};
 
 const Skills = () => {
   const skillCategories = [
     {
       title: 'Frontend',
       icon: FiCode,
-      color: 'from-blue-500 to-cyan-500',
+      color: 'from-green-500 to-emerald-500',
       skills: [
         { name: 'React', icon: SiReact },
         { name: 'Next.js', icon: SiNextdotjs },
@@ -77,9 +88,15 @@ const Skills = () => {
 
   return (
     <section id="skills" className="section-padding bg-background">
-      <div className="container-custom">
+      <motion.div
+        className="container-custom"
+        variants={staggerContainer}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: '-50px' }}
+      >
         {/* Section Header */}
-        <div className="mb-16 text-center">
+        <motion.div variants={fadeUp} className="mb-16 text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             Technical <span className="text-gradient">Skills</span>
           </h2>
@@ -87,13 +104,14 @@ const Skills = () => {
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
             A comprehensive toolkit for building modern, scalable applications
           </p>
-        </div>
+        </motion.div>
 
         {/* Skills Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {skillCategories.map((category, index) => (
-            <div
+            <motion.div
               key={index}
+              variants={fadeUp}
               className="bg-background-secondary border border-gray-800 rounded-2xl p-5 sm:p-6 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 group"
             >
               {/* Category Header */}
@@ -116,17 +134,17 @@ const Skills = () => {
                   </div>
                 ))}
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
 
         {/* Additional Info */}
-        <div className="mt-12 text-center">
+        <motion.div variants={fadeUp} className="mt-12 text-center">
           <p className="text-gray-400 text-sm">
             Continuously learning and expanding my skill set to stay current with industry trends
           </p>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </section>
   );
 };

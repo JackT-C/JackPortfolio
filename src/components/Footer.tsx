@@ -1,4 +1,4 @@
-import { FiGithub, FiLinkedin, FiMail } from 'react-icons/fi';
+import { FiGithub, FiLinkedin, FiMail, FiArrowUp } from 'react-icons/fi';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -6,6 +6,17 @@ const Footer = () => {
   return (
     <footer className="bg-background-secondary py-12 px-6 md:px-12 lg:px-24">
       <div className="container-custom">
+        {/* Back to Top */}
+        <div className="flex justify-center mb-8">
+          <a
+            href="#"
+            className="inline-flex items-center gap-2 px-5 py-2.5 bg-background-tertiary border border-gray-700 hover:border-primary rounded-full text-gray-400 hover:text-primary transition-all duration-200 text-sm font-medium"
+          >
+            <FiArrowUp size={16} />
+            Back to Top
+          </a>
+        </div>
+
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Copyright */}
           <p className="text-gray-400 text-sm">

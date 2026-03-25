@@ -2,6 +2,17 @@
 
 import { useState } from 'react';
 import { FiExternalLink, FiGithub, FiCalendar, FiUsers, FiCpu, FiShoppingCart, FiChevronDown, FiChevronUp, FiMic } from 'react-icons/fi';
+import { motion, AnimatePresence } from 'framer-motion';
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.25, 0.1, 0.25, 1] as const } },
+};
+
+const staggerContainer = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.15 } },
+};
 
 const Projects = () => {
   const [expandedProject, setExpandedProject] = useState<number | null>(null);
@@ -98,7 +109,7 @@ const Projects = () => {
       ],
       liveLink: 'https://datajl-9906ee34d579.herokuapp.com/',
       icon: FiUsers,
-      gradient: 'from-blue-500 to-purple-600',
+      gradient: 'from-green-500 to-emerald-600',
       deepDive: {
         architecture: {
           description: 'Multi-tier architecture with separate web and mobile frontends, unified backend API, and ML pipeline',
@@ -195,9 +206,15 @@ const Projects = () => {
 
   return (
     <section id="projects" className="section-padding bg-background-secondary">
-      <div className="container-custom">
+      <motion.div
+        className="container-custom"
+        variants={staggerContainer}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: '-50px' }}
+      >
         {/* Section Header */}
-        <div className="mb-16 text-center">
+        <motion.div variants={fadeUp} className="mb-16 text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             Featured <span className="text-gradient">Projects</span>
           </h2>
@@ -205,13 +222,14 @@ const Projects = () => {
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
             Real-world applications showcasing full-stack development, cloud deployment, and AI integration
           </p>
-        </div>
+        </motion.div>
 
         {/* Projects Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
           {projects.map((project, index) => (
-            <div
+            <motion.div
               key={index}
+              variants={fadeUp}
               className="bg-background border border-gray-800 rounded-2xl overflow-hidden hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:shadow-primary/10 group"
             >
               <div className="p-6 sm:p-8 md:p-10">
@@ -259,7 +277,7 @@ const Projects = () => {
                     {project.technologies.map((tech) => (
                       <span
                         key={tech}
-                        className="px-3 py-1.5 bg-background-tertiary border border-gray-700 rounded-lg text-sm text-gray-300 hover:border-primary/50 transition-colors"
+                        className="px-3 py-1.5 bg-background-tertiary border border-gray-700 rounded-lg text-sm text-gray-300 hover:border-primary/50 hover:scale-105 hover:bg-primary/10 transition-all duration-200"
                       >
                         {tech}
                       </span>
@@ -273,14 +291,14 @@ const Projects = () => {
                     href={project.liveLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-2 px-6 py-3 bg-primary hover:bg-primary-dark text-white rounded-lg transition-all duration-200 font-semibold hover:glow-effect touch-target"
+                    className="flex items-center justify-center gap-2 px-6 py-3 bg-primary hover:bg-primary-dark text-white rounded-lg transition-all duration-200 font-semibold hover:glow-effect active:scale-95 touch-target"
                   >
                     <FiExternalLink size={18} />
                     View Live Demo
                   </a>
                   <button
                     onClick={() => setExpandedProject(expandedProject === index ? null : index)}
-                    className="flex items-center justify-center gap-2 px-6 py-3 bg-background-tertiary hover:bg-background border border-gray-700 hover:border-primary/50 text-white rounded-lg transition-all duration-200 font-semibold touch-target"
+                    className="flex items-center justify-center gap-2 px-6 py-3 bg-background-tertiary hover:bg-background border border-gray-700 hover:border-primary/50 text-white rounded-lg transition-all duration-200 font-semibold active:scale-95 touch-target"
                   >
                     {expandedProject === index ? <FiChevronUp size={18} /> : <FiChevronDown size={18} />}
                     {expandedProject === index ? 'Hide' : 'View'} Deep Dive
@@ -288,8 +306,17 @@ const Projects = () => {
                 </div>
 
                 {/* Deep Dive Section */}
-                {expandedProject === index && (
-                  <div className="mt-8 pt-8 border-t border-gray-800 animate-slide-up space-y-8">
+                <AnimatePresence>
+                  {expandedProject === index && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: 'auto', opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.4, ease: 'easeInOut' }}
+                      className="overflow-hidden"
+                      aria-live="polite"
+                    >
+                      <div className="mt-8 pt-8 border-t border-gray-800 space-y-8">
                     {/* Architecture */}
                     <div>
                       <h4 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
@@ -336,7 +363,7 @@ const Projects = () => {
                     {/* Future Improvements */}
                     <div>
                       <h4 className="text-xl font-bold text-white mb-4">Future Improvements</h4>
-                      <div className="bg-gradient-to-br from-primary/5 to-purple-600/5 border border-primary/20 rounded-lg p-6">
+                      <div className="bg-gradient-to-br from-primary/5 to-emerald-600/5 border border-primary/20 rounded-lg p-6">
                         <ul className="space-y-3">
                           {project.deepDive.improvements.map((improvement, idx) => (
                             <li key={idx} className="flex items-start gap-3 text-gray-300">
@@ -347,13 +374,15 @@ const Projects = () => {
                         </ul>
                       </div>
                     </div>
-                  </div>
-                )}
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };
