@@ -55,8 +55,7 @@ const Hero = () => {
           {/* Description */}
           <motion.p variants={fadeUp} className="text-lg sm:text-xl md:text-2xl text-gray-400 mb-8 leading-relaxed px-4 sm:px-0">
             Final-year Computer Science student at the University of Reading with 
-            a year-long internship at Eli Lilly. Specialising in React, Next.js, 
-            and AWS to build production-grade, scalable applications.
+            a year-long internship at Eli Lilly. Passionate about software engineering looking for graduate roles starting June 2027.
           </motion.p>
 
           {/* CTA Buttons */}

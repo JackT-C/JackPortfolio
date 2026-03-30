@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { FiExternalLink, FiGithub, FiCalendar, FiUsers, FiCpu, FiShoppingCart, FiChevronDown, FiChevronUp, FiMic } from 'react-icons/fi';
+import { FiExternalLink, FiGithub, FiCalendar, FiUsers, FiCpu, FiShoppingCart, FiChevronDown, FiChevronUp, FiMic, FiPlay } from 'react-icons/fi';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const fadeUp = {
@@ -46,6 +46,7 @@ const Projects = () => {
         'Heroku',
       ],
       liveLink: 'https://mypace-6d33e7a27078.herokuapp.com/',
+      videoDemo: '/MyPaceDemo.webm',
       icon: FiMic,
       gradient: 'from-orange-500 to-red-600',
       deepDive: {
@@ -165,6 +166,7 @@ const Projects = () => {
         'Heroku',
       ],
       liveLink: 'https://restaurant-pos-bilingual-fbe2ee64f280.herokuapp.com/login',
+      videoDemo: '/NewEraDemo.webm',
       icon: FiShoppingCart,
       gradient: 'from-green-500 to-teal-600',
       deepDive: {
@@ -303,6 +305,17 @@ const Projects = () => {
                     {expandedProject === index ? <FiChevronUp size={18} /> : <FiChevronDown size={18} />}
                     {expandedProject === index ? 'Hide' : 'View'} Deep Dive
                   </button>
+                  {project.videoDemo && (
+                    <a
+                      href={project.videoDemo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center gap-2 px-6 py-3 bg-background-tertiary hover:bg-background border border-gray-700 hover:border-primary/50 text-white rounded-lg transition-all duration-200 font-semibold active:scale-95 touch-target"
+                    >
+                      <FiPlay size={18} />
+                      Video Demo
+                    </a>
+                  )}
                 </div>
 
                 {/* Deep Dive Section */}
