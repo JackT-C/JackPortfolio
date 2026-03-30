@@ -46,7 +46,7 @@ const Projects = () => {
         'Heroku',
       ],
       liveLink: 'https://mypace-6d33e7a27078.herokuapp.com/',
-      videoDemo: '/MyPaceDemo.webm',
+      videoDemo: '/MyPaceDemo.mp4',
       icon: FiMic,
       gradient: 'from-orange-500 to-red-600',
       deepDive: {
@@ -166,7 +166,7 @@ const Projects = () => {
         'Heroku',
       ],
       liveLink: 'https://restaurant-pos-bilingual-fbe2ee64f280.herokuapp.com/login',
-      videoDemo: '/NewEraDemo.webm',
+      videoDemo: '/NewEraDemo.mp4',
       icon: FiShoppingCart,
       gradient: 'from-green-500 to-teal-600',
       deepDive: {

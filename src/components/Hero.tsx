@@ -67,7 +67,7 @@ const Hero = () => {
               View Projects
             </a>
             <a
-              href="/Jack_Tilford_Carey_CV.pdf"
+              href="/jacktilfordcareycv.docx"
               download
               className="px-8 py-4 bg-background-tertiary hover:bg-background-secondary border border-gray-700 hover:border-primary text-white rounded-lg transition-all duration-200 font-semibold text-lg hover:scale-105 active:scale-95 w-full sm:w-auto"
             >

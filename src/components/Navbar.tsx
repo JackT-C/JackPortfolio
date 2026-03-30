@@ -121,7 +121,7 @@ const Navbar = () => {
               );
             })}
             <a
-              href="/Jack_Tilford_Carey_CV.pdf"
+              href="/jacktilfordcareycv.docx"
               download
               className="px-6 py-2 bg-primary hover:bg-primary-dark text-white rounded-lg transition-all duration-200 font-medium hover:glow-effect active:scale-95"
             >
@@ -163,7 +163,7 @@ const Navbar = () => {
                 );
               })}
               <a
-                href="/Jack_Tilford_Carey_CV.pdf"
+                href="/jacktilfordcareycv.docx"
                 download
                 role="menuitem"
                 className="px-6 py-3 bg-primary hover:bg-primary-dark text-white rounded-lg transition-all duration-200 font-medium text-center touch-target mt-2 active:scale-95"
