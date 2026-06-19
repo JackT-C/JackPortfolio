@@ -83,43 +83,34 @@ const About = () => {
           {/* Content */}
           <div className="space-y-6 text-lg text-gray-300 leading-relaxed">
             <motion.p variants={fadeUp}>
-              I&apos;m a final-year <span className="text-white font-semibold">Computer Science student</span> at the 
-              <span className="text-white font-semibold"> University of Reading</span>, on track for a 
-              <span className="text-white font-semibold"> Predicted First Class Honours</span>. I&apos;m passionate about 
-              building scalable, cloud-ready applications that solve real-world problems.
+              I&apos;m a <span className="text-white font-semibold">Computer Science student</span> at the{' '}
+              <span className="text-white font-semibold">University of Reading</span>, passionate about technology, problem-solving, and innovation.
             </motion.p>
 
-            <motion.p variants={fadeUp}>
-              During my <span className="text-white font-semibold">year-long placement at Eli Lilly and Company</span>, 
-              I&apos;ve worked as a software engineer on <span className="text-white font-semibold">enterprise-level pharmaceutical applications</span>, 
-              developing my skills in React, Next.js, and cloud technologies within a Fortune 500 organisation. Working in a 
-              <span className="text-white font-semibold"> Scaled Agile Framework</span> environment through two-week sprints, 
-              daily stand-ups, and backlog refinement has given me invaluable insight into how 
-              impactful software is built at scale.
-            </motion.p>
-
-            <motion.p variants={fadeUp}>
-              Alongside this, I co-founded a <span className="text-white font-semibold">student-led onboarding tool</span> to 
-              streamline the new-starter experience at Lilly, and I&apos;ve also contributed beyond code—serving as a 
-              <span className="text-white font-semibold"> Mental Health Ambassador</span> (MHFA England trained), 
-              coordinating the Code for All Hackathon, and delivering lunch-and-learn sessions.
-            </motion.p>
-
-            <motion.p variants={fadeUp}>
-              My interests span <span className="text-white font-semibold">full-stack development</span>, 
-              <span className="text-white font-semibold"> cloud architecture</span>, and 
-              <span className="text-white font-semibold"> AI-powered solutions</span>. I&apos;ve built everything from 
-              voice-interactive AI running coaches to real-time social media platforms and multilingual restaurant POS 
-              systems—taking full ownership from concept to deployment. Outside of tech, I&apos;m a 
-              <span className="text-white font-semibold"> competitive 800m athlete</span> who brings the same discipline 
-              to code as to the track.
-            </motion.p>
-
-            <motion.p variants={fadeUp}>
-              I thrive on <span className="text-white font-semibold">problem-solving</span> and take pride in writing 
-              clean, maintainable code. I&apos;m currently seeking <span className="text-white font-semibold">graduate software engineering roles 
-              starting June 2027</span> where I can continue to grow while contributing to meaningful projects.
-            </motion.p>
+            <motion.ul variants={fadeUp} className="space-y-3">
+              <li className="flex gap-3">
+                <span className="text-primary mt-1 flex-shrink-0">▹</span>
+                <span>Worked as a <span className="text-white font-semibold">Full Stack Software Engineer</span> at{' '}
+                <span className="text-white font-semibold">Eli Lilly and Company</span>, building scalable web apps with React, TypeScript, Python, and AWS — receiving a{' '}
+                <span className="text-white font-semibold">Recognition Award</span> and visiting the U.S. headquarters to collaborate with global teams.</span>
+              </li>
+              <li className="flex gap-3">
+                <span className="text-primary mt-1 flex-shrink-0">▹</span>
+                <span>Completed a <span className="text-white font-semibold">machine learning project</span> at Lilly, expanding skills in data-driven development within a SAFe Agile environment.</span>
+              </li>
+              <li className="flex gap-3">
+                <span className="text-primary mt-1 flex-shrink-0">▹</span>
+                <span>Final year project: <span className="text-white font-semibold">&quot;A Multi-Modal Framework for Diabetes Risk Prediction&quot;</span> — combining ML, NLP, and health data analytics to explore AI&apos;s role in digital healthcare.</span>
+              </li>
+              <li className="flex gap-3">
+                <span className="text-primary mt-1 flex-shrink-0">▹</span>
+                <span>Certified in <span className="text-white font-semibold">AWS Cloud Practitioner</span>, <span className="text-white font-semibold">AWS AI Practitioner</span>, <span className="text-white font-semibold">AZ-900</span>, and <span className="text-white font-semibold">AI-900</span>.</span>
+              </li>
+              <li className="flex gap-3">
+                <span className="text-primary mt-1 flex-shrink-0">▹</span>
+                <span>Competitive <span className="text-white font-semibold">800m athlete</span> — bringing the same discipline to code as to the track.</span>
+              </li>
+            </motion.ul>
 
             {/* Highlight Stats */}
             <motion.div variants={fadeUp} className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 mt-12 pt-8 border-t border-gray-700">
@@ -128,8 +119,8 @@ const About = () => {
                 <div className="text-xs sm:text-sm text-gray-400">Months Industry Experience</div>
               </div>
               <div className="text-center p-3">
-                <AnimatedStat value={2} />
-                <div className="text-xs sm:text-sm text-gray-400">AWS Certifications</div>
+                <AnimatedStat value={4} />
+                <div className="text-xs sm:text-sm text-gray-400">Certifications</div>
               </div>
               <div className="text-center p-3">
                 <AnimatedStat value={10} suffix="+" />

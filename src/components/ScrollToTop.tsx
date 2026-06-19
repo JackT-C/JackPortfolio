@@ -31,7 +31,7 @@ const ScrollToTop = () => {
           exit={{ opacity: 0, scale: 0.8 }}
           transition={{ duration: 0.2 }}
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          className="fixed bottom-8 right-8 z-50 p-3 bg-primary hover:bg-primary-dark text-white rounded-full shadow-lg hover:shadow-primary/30 transition-all duration-200 hover:scale-110 active:scale-95"
+          className="fixed bottom-8 right-8 z-50 p-3 bg-accent hover:opacity-90 text-white rounded-full shadow-lg transition-all duration-200 hover:scale-110 active:scale-95"
           aria-label="Scroll to top"
         >
           <FiArrowUp size={22} />

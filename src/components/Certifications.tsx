@@ -1,7 +1,7 @@
 'use client';
 
 import { SiAmazon } from 'react-icons/si';
-import { FiAward, FiCheckCircle } from 'react-icons/fi';
+import { FiAward, FiCheckCircle, FiCloud } from 'react-icons/fi';
 import { motion } from 'framer-motion';
 
 const fadeUp = {
@@ -34,66 +34,81 @@ const Certifications = () => {
       icon: SiAmazon,
       color: 'from-purple-500 to-pink-500',
     },
+    {
+      title: 'Microsoft Azure Fundamentals (AZ-900)',
+      issuer: 'Microsoft',
+      description: 'Foundational knowledge of cloud services and how they are provided with Azure',
+      skills: ['Azure Services', 'Cloud Concepts', 'Security', 'Pricing & SLAs'],
+      date: '2024',
+      icon: FiCloud,
+      color: 'from-blue-500 to-sky-400',
+    },
+    {
+      title: 'Microsoft Azure AI Fundamentals (AI-900)',
+      issuer: 'Microsoft',
+      description: 'Core knowledge of machine learning and AI concepts on Microsoft Azure',
+      skills: ['AI Workloads', 'Computer Vision', 'NLP', 'Azure AI Services'],
+      date: '2024',
+      icon: FiCloud,
+      color: 'from-cyan-500 to-teal-500',
+    },
   ];
 
   return (
-    <section id="certifications" className="section-padding bg-background-secondary">
+    <section id="certifications" className="scroll-mt-20">
       <motion.div
-        className="container-custom"
         variants={staggerContainer}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: '-50px' }}
+        className="bg-card border border-line rounded-xl overflow-hidden"
       >
-        {/* Section Header */}
-        <motion.div variants={fadeUp} className="mb-16 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            <span className="text-gradient">Certifications</span>
-          </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-primary to-primary-light rounded-full mx-auto mb-4"></div>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Validated expertise in cloud computing and AI technologies
-          </p>
-        </motion.div>
+        {/* Card Header */}
+        <div className="flex items-center gap-2 px-5 py-4 border-b border-line">
+          <FiAward size={15} className="text-accent" />
+          <h2 className="text-sm font-semibold text-fg">Certifications</h2>
+          <span className="ml-auto text-xs text-muted">Validated &amp; Verified</span>
+        </div>
 
         {/* Certifications Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div className="p-5 sm:p-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           {certifications.map((cert, index) => (
             <motion.div
               key={index}
               variants={fadeUp}
-              className="bg-background border border-gray-800 rounded-2xl p-8 hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:shadow-primary/10 group"
+              className="bg-card-2 border border-line rounded-xl p-5 hover:border-accent/50 transition-all duration-300 hover:shadow-lg hover:shadow-accent/10 group"
             >
               {/* Badge Icon */}
-              <div className="flex items-start justify-between mb-6">
-                <div className={`p-4 bg-gradient-to-br ${cert.color} rounded-xl group-hover:scale-110 transition-transform duration-300`}>
-                  <cert.icon size={36} className="text-white" />
+              <div className="flex items-start justify-between mb-4">
+                <div className={`p-3 bg-gradient-to-br ${cert.color} rounded-lg group-hover:scale-110 transition-transform duration-300`}>
+                  <cert.icon size={24} className="text-white" />
                 </div>
-                <div className="flex items-center gap-2 text-gray-400 text-sm">
+                <div className="flex items-center gap-2 text-muted text-xs">
                   <FiAward size={16} />
                   <span>{cert.date}</span>
                 </div>
               </div>
 
               {/* Title & Issuer */}
-              <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-gradient transition-colors">
+              <h3 className="text-base font-bold text-fg mb-1 group-hover:text-gradient transition-colors">
                 {cert.title}
               </h3>
-              <p className="text-primary font-semibold mb-4">{cert.issuer}</p>
+              <p className="text-accent text-xs font-semibold mb-2">{cert.issuer}</p>
 
               {/* Description */}
-              <p className="text-gray-300 mb-6 leading-relaxed">
+              <p className="text-muted text-xs mb-3 leading-relaxed">
                 {cert.description}
               </p>
 
               {/* Skills Covered */}
               <div>
-                <h4 className="text-sm font-semibold text-gray-400 mb-3">Skills Covered:</h4>
-                <div className="flex flex-wrap gap-2">
+                <h4 className="text-[10px] font-semibold text-muted uppercase tracking-wider mb-2">Skills</h4>
+                <div className="flex flex-wrap gap-1.5">
                   {cert.skills.map((skill, idx) => (
                     <span
                       key={idx}
-                      className="px-3 py-1.5 bg-background-tertiary border border-gray-700 rounded-lg text-sm text-gray-300 hover:border-primary/50 hover:scale-105 hover:bg-primary/10 transition-all duration-200"
+                      className="text-[10px] px-2 py-0.5 bg-card border border-line rounded-full text-muted hover:border-accent/50 hover:bg-accent/10 transition-all duration-200"
                     >
                       {skill}
                     </span>
@@ -102,7 +117,7 @@ const Certifications = () => {
               </div>
 
               {/* Verified Badge */}
-              <div className="mt-6 pt-6 border-t border-gray-800">
+              <div className="mt-6 pt-6 border-t border-line">
                 <div className="flex items-center gap-2 text-green-500">
                   <FiCheckCircle size={18} />
                   <span className="text-sm font-semibold">Verified Certification</span>
@@ -110,6 +125,7 @@ const Certifications = () => {
               </div>
             </motion.div>
           ))}
+        </div>
         </div>
       </motion.div>
     </section>

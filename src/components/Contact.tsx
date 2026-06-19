@@ -1,127 +1,71 @@
 'use client';
 
-import { FiMail, FiGithub, FiLinkedin, FiSend } from 'react-icons/fi';
+import { FiMail, FiGithub, FiLinkedin, FiMapPin } from 'react-icons/fi';
 import { motion } from 'framer-motion';
-
-const fadeUp = {
-  hidden: { opacity: 0, y: 30 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.25, 0.1, 0.25, 1] as const } },
-};
-
-const staggerContainer = {
-  hidden: {},
-  visible: { transition: { staggerChildren: 0.15 } },
-};
 
 const Contact = () => {
   return (
-    <section id="contact" className="section-padding bg-background">
+    <section id="contact" className="scroll-mt-20">
       <motion.div
-        className="container-custom"
-        variants={staggerContainer}
-        initial="hidden"
-        whileInView="visible"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: '-50px' }}
+        transition={{ duration: 0.5 }}
+        className="bg-card border border-line rounded-xl overflow-hidden"
       >
-        {/* Section Header */}
-        <motion.div variants={fadeUp} className="mb-16 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Get In <span className="text-gradient">Touch</span>
-          </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-primary to-primary-light rounded-full mx-auto mb-4"></div>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            I&apos;m currently seeking graduate software engineering opportunities. Let&apos;s connect!
-          </p>
-        </motion.div>
+        {/* Card header */}
+        <div className="flex items-center gap-2 px-5 py-4 border-b border-line">
+          <FiMail size={15} className="text-accent" />
+          <h2 className="text-sm font-semibold text-fg">Get in Touch</h2>
+          <span className="ml-auto text-xs text-muted">Open to opportunities</span>
+        </div>
 
-        {/* Contact Content */}
-        <motion.div variants={fadeUp} className="max-w-4xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-            {/* Left Column - Contact Info */}
-            <div className="space-y-6">
-              <div className="bg-background-secondary border border-gray-800 rounded-2xl p-6 sm:p-8">
-                <h3 className="text-xl sm:text-2xl font-bold text-white mb-6">Let&apos;s Connect</h3>
-                <p className="text-gray-300 mb-8 leading-relaxed text-sm sm:text-base">
-                  I&apos;m actively looking for graduate software engineering roles in cloud, full-stack, 
-                  or frontend-focused positions. Feel free to reach out!
-                </p>
-
-                {/* Contact Methods */}
-                <div className="space-y-4">
-                  <a
-                    href="mailto:jacktilfordcarey@gmail.com"
-                    className="flex items-center gap-4 p-4 bg-background-tertiary hover:bg-background rounded-lg transition-colors duration-200 group"
-                  >
-                    <div className="p-3 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors">
-                      <FiMail size={24} className="text-primary" />
-                    </div>
-                    <div>
-                      <p className="text-sm text-gray-400">Email</p>
-                      <p className="text-white font-medium">jacktilfordcarey@gmail.com</p>
-                    </div>
-                  </a>
-
-                  <a
-                    href="https://github.com/JackT-C"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-4 p-4 bg-background-tertiary hover:bg-background rounded-lg transition-colors duration-200 group"
-                  >
-                    <div className="p-3 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors">
-                      <FiGithub size={24} className="text-primary" />
-                    </div>
-                    <div>
-                      <p className="text-sm text-gray-400">GitHub</p>
-                      <p className="text-white font-medium">@JackT-C</p>
-                    </div>
-                  </a>
-
-                  <a
-                    href="https://www.linkedin.com/in/jack-tilford-carey-8a0940227/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-4 p-4 bg-background-tertiary hover:bg-background rounded-lg transition-colors duration-200 group"
-                  >
-                    <div className="p-3 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors">
-                      <FiLinkedin size={24} className="text-primary" />
-                    </div>
-                    <div>
-                      <p className="text-sm text-gray-400">LinkedIn</p>
-                      <p className="text-white font-medium">Jack Tilford-Carey</p>
-                    </div>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            {/* Right Column - CTA */}
-            <div className="bg-gradient-to-br from-primary/10 to-emerald-600/10 border border-primary/30 rounded-2xl p-6 sm:p-8 flex flex-col justify-center items-center text-center">
-              <div className="w-14 h-14 sm:w-16 sm:h-16 bg-primary/20 rounded-full flex items-center justify-center mb-6">
-                <FiSend size={28} className="text-primary sm:w-8 sm:h-8" />
-              </div>
-              <h3 className="text-xl sm:text-2xl font-bold text-white mb-4">
-                Open to Opportunities
-              </h3>
-              <p className="text-gray-300 mb-8 leading-relaxed text-sm sm:text-base">
-                Looking for a passionate software engineer with industry experience? 
-                I&apos;d love to hear from you!
-              </p>
-              <a
-                href="mailto:jacktilfordcarey@gmail.com"
-                className="px-8 py-4 bg-primary hover:bg-primary-dark text-white rounded-lg transition-all duration-200 font-semibold text-lg hover:glow-effect hover:scale-105 active:scale-95 w-full sm:w-auto touch-target"
+        {/* Contact links */}
+        <div className="p-5 sm:p-6">
+        <div className="flex flex-wrap gap-4">
+          <a
+            href="mailto:jacktilfordcarey@gmail.com"
+                className="flex items-center gap-3 px-5 py-3 bg-card-2 border border-line rounded-lg hover:border-accent/50 hover:bg-accent/10 transition-all duration-200 group"
               >
-                Send Message
+                <FiMail size={18} className="text-accent" />
+                <div>
+                  <p className="text-[11px] text-muted">Email</p>
+                  <p className="text-sm text-fg font-medium">jacktilfordcarey@gmail.com</p>
+                </div>
+              </a>
+
+              <a
+                href="https://github.com/jacktilfordcarey"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 px-5 py-3 bg-card-2 border border-line rounded-lg hover:border-accent/50 hover:bg-accent/10 transition-all duration-200 group"
+              >
+                <FiGithub size={18} className="text-accent" />
+                <div>
+                  <p className="text-[11px] text-muted">GitHub</p>
+                  <p className="text-sm text-fg font-medium">@jacktilfordcarey</p>
+                </div>
+              </a>
+
+              <a
+                href="https://www.linkedin.com/in/jack-tilford-carey-8a0940227/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 px-5 py-3 bg-card-2 border border-line rounded-lg hover:border-accent/50 hover:bg-accent/10 transition-all duration-200 group"
+              >
+                <FiLinkedin size={18} className="text-accent" />
+                <div>
+                  <p className="text-[11px] text-muted">LinkedIn</p>
+                  <p className="text-sm text-fg font-medium">Jack Tilford-Carey</p>
+                </div>
               </a>
             </div>
-          </div>
 
-          {/* Additional Info */}
-          <div className="mt-12 text-center">
-            <p className="text-gray-400">
-              Based in the United Kingdom • Available for full-time positions
-            </p>
-          </div>
-        </motion.div>
+        <div className="mt-5 pt-5 border-t border-line flex items-center justify-center gap-2 text-xs text-muted">
+          <FiMapPin size={13} className="text-accent" />
+          Based in the United Kingdom · Available for full-time positions from June 2027
+        </div>
+        </div>
       </motion.div>
     </section>
   );

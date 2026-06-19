@@ -47,73 +47,72 @@ const experiences = [
 
 const Experience = () => {
   return (
-    <section id="experience" className="section-padding bg-background">
+    <section id="experience" className="scroll-mt-20">
       <motion.div
-        className="container-custom"
         variants={staggerContainer}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: '-50px' }}
+        className="bg-card border border-line rounded-xl overflow-hidden"
       >
-        {/* Section Header */}
-        <motion.div variants={fadeUp} className="mb-16 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Professional <span className="text-gradient">Experience</span>
-          </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-primary to-primary-light rounded-full mx-auto"></div>
-        </motion.div>
+        {/* Card Header */}
+        <div className="flex items-center gap-2 px-5 py-4 border-b border-line">
+          <FiBriefcase size={15} className="text-accent" />
+          <h2 className="text-sm font-semibold text-fg">Professional Experience</h2>
+        </div>
 
         {/* Timeline */}
-        <div className="max-w-4xl mx-auto relative">
+        <div className="p-5 sm:p-6 relative">
+        <div className="relative">
           {/* Vertical line */}
-          <div className="absolute left-4 sm:left-6 top-0 bottom-0 w-px bg-gradient-to-b from-primary/50 via-primary/20 to-transparent" />
+          <div className="absolute left-4 sm:left-6 top-0 bottom-0 w-px bg-gradient-to-b from-accent/50 via-accent/20 to-transparent" />
 
           <div className="space-y-10">
             {experiences.map((exp, index) => (
               <motion.div key={index} variants={fadeUp} className="relative pl-12 sm:pl-16">
                 {/* Timeline dot */}
-                <div className="absolute left-2.5 sm:left-4.5 top-1.5 w-3 h-3 bg-primary rounded-full ring-4 ring-background" />
+                <div className="absolute left-2.5 sm:left-4.5 top-1.5 w-3 h-3 bg-accent rounded-full ring-4 ring-canvas" />
 
-                <div className="bg-background-secondary border border-gray-800 rounded-2xl p-6 sm:p-8 hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:shadow-primary/10">
+                <div className="bg-card border border-line rounded-2xl p-6 sm:p-8 hover:border-accent/50 transition-all duration-300 hover:shadow-xl hover:shadow-accent/10">
                   {/* Header */}
                   <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-4 gap-3">
                     <div>
-                      <h3 className="text-xl sm:text-2xl font-bold text-white mb-1">
+                      <h3 className="text-xl sm:text-2xl font-bold text-fg mb-1">
                         {exp.title}
                       </h3>
-                      <div className="flex items-center gap-2 text-primary font-semibold">
+                      <div className="flex items-center gap-2 text-accent font-semibold">
                         <FiBriefcase size={16} />
                         <span>{exp.company}</span>
                       </div>
                     </div>
-                    <div className="flex items-center gap-2 text-gray-400 text-sm flex-shrink-0">
+                    <div className="flex items-center gap-2 text-muted text-sm flex-shrink-0">
                       <FiCalendar size={14} />
                       <span>{exp.period}</span>
                     </div>
                   </div>
 
                   {/* Description */}
-                  <p className="text-gray-300 mb-5 leading-relaxed">
+                  <p className="text-muted mb-5 leading-relaxed">
                     {exp.description}
                   </p>
 
                   {/* Key Contributions */}
                   <div className="space-y-2.5 mb-6">
                     {exp.contributions.map((item, idx) => (
-                      <div key={idx} className="flex items-start gap-3 text-gray-300">
-                        <FiCheckCircle className="text-primary mt-0.5 flex-shrink-0" size={16} />
+                      <div key={idx} className="flex items-start gap-3 text-fg/80">
+                        <FiCheckCircle className="text-accent mt-0.5 flex-shrink-0" size={16} />
                         <span className="leading-relaxed text-sm sm:text-base">{item}</span>
                       </div>
                     ))}
                   </div>
 
                   {/* Tech Tags */}
-                  <div className="pt-5 border-t border-gray-700">
+                  <div className="pt-5 border-t border-line">
                     <div className="flex flex-wrap gap-2">
                       {exp.technologies.map((tech) => (
                         <span
                           key={tech}
-                          className="px-3 py-1.5 bg-background-tertiary border border-gray-700 rounded-lg text-xs sm:text-sm text-gray-300 hover:border-primary/50 hover:scale-105 hover:bg-primary/10 transition-all duration-200"
+                          className="px-3 py-1.5 bg-card-2 border border-line rounded-lg text-xs sm:text-sm text-muted hover:border-accent/50 hover:scale-105 hover:bg-accent/10 transition-all duration-200"
                         >
                           {tech}
                         </span>
@@ -124,6 +123,7 @@ const Experience = () => {
               </motion.div>
             ))}
           </div>
+        </div>
         </div>
       </motion.div>
     </section>

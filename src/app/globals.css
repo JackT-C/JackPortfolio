@@ -2,9 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ── Theme tokens ──────────────────────────────────────────── */
+:root {
+  --canvas:      #f6f8fa;
+  --card:        #ffffff;
+  --card-2:      #f0f6fc;
+  --fg:          #1f2328;
+  --muted:       #656d76;
+  --border:      #d0d7de;
+  --accent:      #0969da;
+  --accent-end:  #8250df;
+  --accent-dim:  rgba(9, 105, 218, 0.1);
+}
+
+.dark {
+  --canvas:      #0d1117;
+  --card:        #161b22;
+  --card-2:      #1c2128;
+  --fg:          #e6edf3;
+  --muted:       #8b949e;
+  --border:      #30363d;
+  --accent:      #58a6ff;
+  --accent-end:  #bc8cff;
+  --accent-dim:  rgba(88, 166, 255, 0.1);
+}
+
 @layer base {
   body {
-    @apply bg-background text-white antialiased;
+    background-color: var(--canvas);
+    color: var(--fg);
+    @apply antialiased;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 
@@ -12,7 +39,6 @@
     scroll-behavior: smooth;
   }
 
-  /* Ensure proper mobile rendering */
   * {
     -webkit-tap-highlight-color: transparent;
   }
@@ -20,34 +46,38 @@
 
 @layer utilities {
   .text-gradient {
-    @apply bg-gradient-to-r from-primary-light to-primary bg-clip-text text-transparent;
+    background: linear-gradient(135deg, var(--accent) 0%, var(--accent-end) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 
   .glow-effect {
-    box-shadow: 0 0 20px rgba(34, 197, 94, 0.3);
+    box-shadow: 0 0 20px var(--accent-dim);
   }
 
   .section-padding {
-    @apply py-12 px-4 sm:py-16 sm:px-6 md:py-20 md:px-8 lg:px-24;
+    @apply py-10 sm:py-12;
   }
 
   .container-custom {
     @apply max-w-7xl mx-auto w-full;
   }
 
-  /* Improve touch targets for mobile */
   .touch-target {
     @apply min-h-[44px] min-w-[44px];
   }
 
   .section-divider {
-    @apply h-px bg-gradient-to-r from-transparent via-gray-800 to-transparent;
+    height: 1px;
+    background-color: var(--border);
+    opacity: 0.5;
   }
 
   .grid-pattern {
-    background-image: 
-      linear-gradient(rgba(34, 197, 94, 0.03) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(34, 197, 94, 0.03) 1px, transparent 1px);
-    background-size: 60px 60px;
+    background-image:
+      linear-gradient(var(--accent-dim) 1px, transparent 1px),
+      linear-gradient(90deg, var(--accent-dim) 1px, transparent 1px);
+    background-size: 48px 48px;
   }
 }

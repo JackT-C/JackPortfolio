@@ -54,8 +54,7 @@ const Hero = () => {
 
           {/* Description */}
           <motion.p variants={fadeUp} className="text-lg sm:text-xl md:text-2xl text-gray-400 mb-8 leading-relaxed px-4 sm:px-0">
-            Final-year Computer Science student at the University of Reading with 
-            a year-long internship at Eli Lilly. Passionate about software engineering looking for graduate roles starting June 2027.
+            Final-year Computer Science student at the University of Reading, passionate about technology, problem-solving, and innovation.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -78,7 +77,7 @@ const Hero = () => {
           {/* Social Links */}
           <motion.div variants={fadeUp} className="flex items-center justify-center gap-6">
             <a
-              href="https://github.com/JackT-C"
+              href="https://github.com/jacktilfordcarey"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-primary transition-colors duration-200 hover:scale-110 transform"
