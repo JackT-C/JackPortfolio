@@ -1,6 +1,6 @@
 'use client';
 
-import { FiBriefcase, FiCalendar, FiCheckCircle } from 'react-icons/fi';
+import { FiBriefcase, FiCalendar, FiCheckCircle, FiBook } from 'react-icons/fi';
 import { motion } from 'framer-motion';
 
 const fadeUp = {
@@ -15,33 +15,34 @@ const staggerContainer = {
 
 const experiences = [
   {
-    title: 'Software Engineering Placement Student',
-    company: 'Eli Lilly and Company',
-    period: 'Jul 2025 – Jul 2026',
+    title: 'Software Development Placement',
+    company: 'Eli Lilly – Bracknell',
+    period: 'Jun 2025 – Jun 2026',
     description:
-      'Working as part of the software engineering team on enterprise-level pharmaceutical applications within a Scaled Agile Framework environment at a Fortune 500 company.',
+      'Full-stack software engineer on Lilly Nexus, a clinical trials platform, within a Scaled Agile Framework (SAFe) environment at a Fortune 500 company.',
     contributions: [
-      'Developed features for enterprise-level pharmaceutical applications using React and Next.js',
-      'Contributed to the full software development lifecycle from requirements gathering to deployment',
-      'Earned AWS Certified Cloud Practitioner and AWS Certified AI Practitioner certifications',
-      'Co-founded a student-led onboarding tool to streamline the new-starter experience',
-      'Served as Mental Health Ambassador, completing MHFA England training and organising wellness initiatives',
-      'Coordinated the Code for All Hackathon, with supervised team achieving first place',
+      'Developed features and fixed critical bugs for Lilly Nexus, a clinical trials platform used by 500+ users',
+      'Worked within SAFe, participating in PI planning, sprint ceremonies, stakeholder demos, and cross-functional collaboration; followed enterprise delivery best practices including GitHub pull requests, peer code reviews, QA testing, and production release workflows',
+      'Proposed and implemented the Lilly Onboarding Portal — a task-tracking and resource hub built with React, Next.js, and PostgreSQL, adopted by 3+ teams across India, significantly reducing manual onboarding effort',
     ],
-    technologies: ['React', 'Next.js', 'TypeScript', 'AWS', 'Node.js', 'Git', 'Agile'],
+    technologies: ['React', 'Next.js', 'TypeScript', 'PostgreSQL', 'AWS', 'Git', 'SAFe Agile'],
   },
+];
+
+const education = [
   {
-    title: 'Research Assistant',
-    company: 'University of Reading',
-    period: 'Mar 2024 – Jul 2024',
-    description:
-      'Researched and documented achievements of diverse mathematicians and computer scientists, contributing to diversity and inclusion initiatives in STEM education.',
-    contributions: [
-      'Created engaging profiles published on university website reaching thousands of viewers',
-      'Helped bring greater attention to underrepresented individuals in STEM',
-      'Collaborated with multiple university departments to gather and verify information',
+    degree: 'BSc Computer Science',
+    institution: 'University of Reading',
+    period: 'Sep 2023 – Present',
+    grade: 'Predicted: First Class Honours',
+    modules: [
+      'Software Engineering',
+      'Artificial Intelligence & Machine Learning',
+      'Cloud Concepts',
+      'Data Science',
+      'Security & Blockchain',
     ],
-    technologies: ['Research', 'Technical Writing', 'Content Creation'],
+    activities: ['RUHacking', 'Athletics'],
   },
 ];
 
@@ -124,6 +125,54 @@ const Experience = () => {
             ))}
           </div>
         </div>
+        </div>
+
+        {/* Education sub-section */}
+        <div className="px-5 sm:px-6 pb-5 sm:pb-6 border-t border-line">
+          <div className="flex items-center gap-2 py-4 mb-4">
+            <FiBook size={14} className="text-accent" />
+            <span className="text-xs font-semibold text-muted uppercase tracking-wider">Education</span>
+          </div>
+          {education.map((edu, index) => (
+            <motion.div key={index} variants={fadeUp}>
+              <div className="bg-card-2 border border-line rounded-xl p-5 hover:border-accent/50 transition-all duration-300">
+                <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-3 gap-2">
+                  <div>
+                    <h3 className="text-base font-bold text-fg mb-0.5">{edu.degree}</h3>
+                    <div className="flex items-center gap-2 text-accent font-semibold text-sm">
+                      <FiBook size={13} />
+                      <span>{edu.institution}</span>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-2 text-muted text-xs flex-shrink-0">
+                    <FiCalendar size={12} />
+                    <span>{edu.period}</span>
+                  </div>
+                </div>
+                <p className="text-sm text-accent font-medium mb-3">{edu.grade}</p>
+                <div className="mb-3">
+                  <p className="text-[11px] font-semibold text-muted uppercase tracking-wider mb-2">Relevant Modules</p>
+                  <div className="flex flex-wrap gap-1.5">
+                    {edu.modules.map((mod) => (
+                      <span key={mod} className="text-xs px-2.5 py-1 bg-card border border-line rounded-full text-muted hover:border-accent/50 hover:bg-accent/10 transition-all duration-200">
+                        {mod}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                <div>
+                  <p className="text-[11px] font-semibold text-muted uppercase tracking-wider mb-2">Activities</p>
+                  <div className="flex flex-wrap gap-1.5">
+                    {edu.activities.map((act) => (
+                      <span key={act} className="text-xs px-2.5 py-1 bg-card border border-line rounded-full text-muted">
+                        {act}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          ))}
         </div>
       </motion.div>
     </section>

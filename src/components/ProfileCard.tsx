@@ -37,7 +37,7 @@ export default function ProfileCard() {
           <div className="flex flex-wrap justify-center sm:justify-start gap-x-4 gap-y-1 my-3 text-sm text-muted">
             <span className="flex items-center gap-1.5">
               <FiBriefcase size={13} className="text-accent flex-shrink-0" />
-              Software Engineer · Eli Lilly
+              Software Engineer · Former Eli Lilly
             </span>
             <span className="flex items-center gap-1.5">
               <FiMapPin size={13} className="text-accent flex-shrink-0" />
@@ -48,8 +48,8 @@ export default function ProfileCard() {
           {/* Bio */}
           <p className="text-sm text-muted leading-relaxed mb-4 max-w-lg">
             Computer Science student at the University of Reading (Predicted First Class Honours).
-            Full Stack Engineer at Eli Lilly building scalable apps with React, TypeScript, and AWS.
-            AWS & Azure certified. Competitive 800m athlete. Seeking graduate roles from June 2027.
+            Former Full Stack Engineer at Eli Lilly building scalable apps with React, TypeScript, and AWS.
+            AWS &amp; Azure certified.
           </p>
 
           {/* Skill tags */}
