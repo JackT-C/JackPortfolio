@@ -1,13 +1,23 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { FiExternalLink, FiGithub, FiMic, FiUsers, FiShoppingCart } from 'react-icons/fi';
+import { FiExternalLink, FiGithub, FiMic, FiUsers, FiShoppingCart, FiSmartphone } from 'react-icons/fi';
 
 const projects = [
   {
-    title: 'MyPace',
+    title: 'MyPace (Mobile App)',
     description:
-      'AI-powered running coach with hands-free voice interaction, Strava integration, and personalised coaching powered by Groq LLaMA models.',
+      'Mobile-first running coach built with Expo/React Native. Dual Strava + Garmin integration, training load & recovery dashboard (HRV, sleep, body battery), and AI recommendations driven by recovery state.',
+    techs: ['React Native', 'Expo', 'Strava API', 'Garmin API', 'OpenRouter'],
+    liveUrl: null,
+    githubUrl: null,
+    icon: FiSmartphone,
+    gradient: 'from-orange-400 to-pink-500',
+  },
+  {
+    title: 'MyPace (Web App)',
+    description:
+      'AI-powered running coach with hands-free voice interaction, Strava integration, and personalised coaching powered by OpenRouter.',
     techs: ['React', 'Node.js', 'PostgreSQL', 'Groq AI', 'Heroku'],
     liveUrl: 'https://mypace-6d33e7a27078.herokuapp.com/',
     githubUrl: null,
